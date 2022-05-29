@@ -1,0 +1,162 @@
+                    <div class="form1">
+                    </div>
+                    
+                    <div class="form2">
+                    </div>
+                    
+                    <div class="form3">
+                    </div>
+                    
+                    <div class="form4">
+                    </div>
+                    
+                    <div class="form5">
+                    </div>
+
+
+
+
+
+
+
+                    
+            var fm1 = document.forms[0];
+            var fm2 = document.forms[1];
+            var fm3 = document.forms[2];
+            var fm4 = document.forms[3];
+            var fm5 = document.forms[4];
+
+            var el1 = fm1.elements;
+            var el2 = fm2.elements;
+            var el3 = fm3.elements;
+            var el4 = fm4.elements;
+            var el5 = fm5.elements;
+
+            var form1 = document.querySelector('form1');
+            var form2 = document.querySelector('form2');
+            var form3 = document.querySelector('form3');
+            var form4= document.querySelector('form4');
+            var form5 = document.querySelector('form5');
+
+            var dados = document.querySelector('.mostraSave');
+
+            var i1 = 0;
+            var i2 = 0;
+            var i3 = 0;
+            var i4 = 0;
+            var i5 = 0;
+
+            
+            var registro1 = ""
+            var registro2 = ""
+            var registro3 = ""
+            var registro4 = ""
+            var registro5 = ""
+
+
+
+
+
+                            while(i1 < el1.length){
+                    registro1 += el1[i1].value
+                    form1.innerHTML = registro1;
+                    el1[i1].value = "";
+                    i1++;
+                }
+
+                while(i2 < el2.length){
+                    registro2 += el2[i2].value;
+                    form2.innerHTML = registro2;
+                    el2[i2].value = "";
+                    i2++;
+                }
+
+                while(i3 < el3.length){
+                    registro3 += el3[i3].value;
+                    form3.innerHTML = registro3;
+                    el3[i3].value = "";
+                    i3++;
+                }
+
+                while(i4 < el4.length){
+                    registro4 += el4[i4].value;
+                    form4.innerHTML = registro4;
+                    el4[i4].value = "";
+                    i4++;
+                }
+
+                while(i5 < el5.length){
+                    registro5 += el5[i5].value;
+                    form5.innerHTML = registro5;
+                    el5[i5].value = "";
+                    i5++;
+                }
+
+
+
+                
+.form1{
+    font-size: 1.4rem;
+    width: 555px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 1.2rem;
+    line-height: 2.6rem;
+}
+
+.form2{
+    width: 221px;
+    height: 18px;
+    margin: 0 auto;
+    margin-top: 1.2rem;
+}
+
+.form3{
+    width: 600px;
+    height: 18px;
+    margin-top: 1.2rem;
+    line-height: 2rem;
+}
+
+.form4{
+    width: 555px;
+    height: 18px;
+    margin-top: 1.2rem;
+    line-height: 2rem;
+}
+
+.form5{
+    width: 500px;
+    height: 140px;
+    margin-top: 1.2rem;
+    line-height: 2rem;
+}
+
+
+        <div class="separa">
+            <input type="text" id="inputNome" placeholder="Coloque seu nome">
+            <button id="botaoSalvar" type="submit" onclick="botaoSalvar()">Salvar</button>
+        </div>
+        <div class="separa2">
+
+
+
+        function botaoSalvar(){
+            nomes.push(document.getElementById('inputNome').value.toLowerCase());
+            document.getElementById('inputNome').value = "";
+            mostra.innerHTML += "<tr> <td>" + nomes[i]; + "</td> </tr>"
+            i++
+        };
+
+        
+            function mostra(){
+                if(document.getElementById('ma').hidden == false){
+                    document.getElementById('ma').hidden = true;
+                    document.getElementById('bma').value = "Mostrar"
+                    document.getElementById('colocaMargin').style.marginBottom = '4rem';
+                }else{
+                    document.getElementById('ma').hidden = false
+                    document.getElementById('bma').value = "Ocultar"
+                    document.getElementById('colocaMargin').style.marginBottom = 0;
+                }
+            }

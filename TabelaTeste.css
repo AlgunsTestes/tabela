@@ -1,0 +1,218 @@
+/*inicio do reset do site*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*fim do reset do site*/
+
+body{
+    background: #F0F0F7;
+}
+
+.menu{
+    border-radius: 0 0 2rem 2rem;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu a{
+    width: 100vw;
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    text-justify: center;
+    font: 30 1.7rem monospace;
+    background-color: white;
+    border-radius: 0 0 2rem 2rem;
+    transition:background 1s, color 1s;
+}
+
+.menu a:hover{
+    background-color: #00910c;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: #00910c;
+}
+
+header{
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    background-color: #5cff698f;
+}
+
+header img{
+    width: 250px;
+    height: 250px;
+    border-radius: 5%;
+    margin: 0;
+}
+
+.deixarNoCentro{
+    height: 100%;
+    width: 80vw;
+    margin-left: 10vw ;
+    background-color: #ebebeb;
+    border-radius: 2rem;
+    margin-top: -26px;
+}
+
+
+#botaoSalvar{
+    font-size: 1.2rem;
+    margin: 14px;
+    border: 2px solid black;
+    background: none;
+    outline: 0;
+    width: 90%;
+    height: 3.2rem;
+    margin-top: 1rem;
+    border-radius: 2rem 4rem;
+    font: 400 2.3rem monospace;
+    margin-left: 4%;
+    transition: background 300ms;
+}
+
+#botaoSalvar:hover{
+    background: #57575786;
+}
+
+form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.button{
+    display: block;
+}
+
+
+input, #button, .salvo, label{
+    width: 90%;
+    height: 2.8rem;
+    margin-top: 0.8rem;
+    margin-right: 0;
+    margin-left: 0.8rem;
+    border-radius:  2rem;
+    background-color: #ffffff44;
+    border: 2px solid #000000;
+    outline: 0;
+    padding: 0 1.6rem;
+    font: 1.5rem monospace;
+}
+
+#observaçoes, #bairro{
+    width: 190%;
+    z-index: 10;
+}
+
+label{
+    width: 90%;
+    border: 0;
+    background-color: #ebebeb;
+    font: 1.25rem monospace;
+    padding-top: 10px;
+    z-index: 0;
+}
+
+.mostraSave{
+    background: none;
+    width: 600px;
+    margin: 0 auto;
+    font: 400 1.3rem monospace;
+    background: rgb(235, 235, 235);
+
+}
+
+table, td{
+    border-collapse: collapse;
+    font: 100 1.4rem monospace;
+    width: 600px;
+}
+
+tr{
+    margin: 1.7rem;
+    border: 1px solid;
+}
+
+td{
+    width: 300px;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+}
+
+.separaInputs{
+    border: 0 none;
+    width: 600px;
+    height: 30px;
+    padding: 0;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bma{
+    border: 2px solid;
+    border-radius: 4rem 2rem;
+    margin-bottom: 5px;
+    width: 95%;
+    height: 40px;
+    background: none;
+    font: 520 1.5rem monospace;
+    transition:background 250ms,  font-size 250ms;
+}
+
+#bma:hover{
+    background: #57575786;
+    font: 520 2rem monospace;
+}
+
+.flip-card{
+    width: 250px;
+    height: 250px;
+    transform: scale(0.7);
+    perspective: 850px;
+    margin-top: 40px;
+}
+
+.card{
+    position: relative;
+    transform-style:preserve-3d;
+    transition: transform 1.7s;
+}
+
+.flip-card:hover .card{
+    transform: rotateY(180deg);
+
+}
+
+.card-front,
+.card-end{
+    backface-visibility: hidden;
+    left: 0;
+    position: absolute;
+    top:0;
+}
+
+.card-end{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    width: 250px;
+    border-radius:5%;
+    font-size: 5.5rem;
+    transform: rotateY(180deg) scale(1.06);
+    transition: transform rotateY 3s;
+}
