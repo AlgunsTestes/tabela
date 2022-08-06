@@ -135,8 +135,8 @@ label{
 
 table, td{
     border-collapse: collapse;
-    font: 100 1.4rem monospace;
-    width: 600px;
+    font: 100 11px Calibri;
+    width: 640px;
 }
 
 tr{
@@ -149,6 +149,8 @@ td{
     margin: 0;
     padding: 0;
     padding-left: 10px;
+    border: 1px black;
+    border-collapse: collapse;
 }
 
 .separaInputs{
